@@ -1,0 +1,4 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/flutter_app_sql_lite/BuildConfig.java
+ com.flutter_app_sql_lite.BuildConfig

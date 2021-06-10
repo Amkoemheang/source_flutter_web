@@ -1,0 +1,45 @@
+name: getx
+description: A new Flutter project.
+publish_to: 'none'
+version: 1.0.0+1
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  get: ^3.26.0
+  http: ^0.13.1
+  flutter_native_splash: ^1.0.3
+  badges: ^1.2.0
+  expansion_tile_card: ^2.0.0
+  data_tables: ^1.3.2
+  responsive_table: ^0.1.1+8
+  horizontal_data_table: ^3.0.0
+  dio: ^4.0.0
+  fluttertoast: ^8.0.6
+  universal_html: ^2.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+flutter:
+  uses-material-design: true
+
+  assets:
+     - assets/images/
+     - assets/raw/
+
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+
