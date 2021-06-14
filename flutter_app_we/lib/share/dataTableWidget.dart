@@ -81,6 +81,8 @@ class _DataTableWidgetState extends State<DataTableWidget> {
                                     FlatButton(
                                         onPressed: () async {
                                               //_controller.postModel.removeAt(e.key);_controller.deleteTodoTesting(e.value.id);
+                                          widget.postModels.removeAt(e.key);
+                                          postVM.delete(e.value.id);
                                           Navigator.pop(context);
                                         },
                                         child:Text(

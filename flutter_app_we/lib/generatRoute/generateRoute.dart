@@ -8,6 +8,7 @@ import 'package:flutter_app_we/ui/graph.dart';
 import 'package:flutter_app_we/ui/message.dart';
 import 'package:flutter_app_we/ui/report.dart';
 import 'package:flutter_app_we/ui/table.dart';
+import 'package:flutter_app_we/user/create_user.dart';
 import 'package:flutter_app_we/user/update_info.dart';
 import 'package:flutter_app_we/extensions/string_extention.dart';
 
@@ -31,6 +32,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return _getPageRoute(UpdateInfo(settings.arguments as UpdateTodoBody), settings);
     case RouteName.DETAIL_ONE:
       return _getPageRoute(DetailOne(), settings);
+    case RouteName.CREATE_USER:
+      return _getPageRoute(CreateUser(), settings);
     default:
       return _getPageRoute(Dashboard(), settings);
   }

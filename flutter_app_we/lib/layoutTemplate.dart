@@ -9,12 +9,13 @@ class LayoutTemplate extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 1.0,
         title: Text("Web Application",style: TextStyle(color: Colors.blue),),
       backgroundColor: Colors.white54,
         actions: [
               Row(
                  children: [
-                   Icon(Icons.search,color: Colors.blue,),
+                   Icon(Icons.settings,color: Colors.blue,),
                    SizedBox(width: 30.0,),
                    Icon(Icons.people,color: Colors.blue,),
                    SizedBox(width: 20.0,),

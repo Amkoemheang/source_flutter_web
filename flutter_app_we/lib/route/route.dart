@@ -10,4 +10,5 @@ class RouteName{
   static const String id = "";
   static const String UPDATE = '/update';
   static const String TESTING = '/testing';
+  static const String CREATE_USER = '/create_user';
 }

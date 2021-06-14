@@ -35,20 +35,20 @@ class PostVM extends BaseModel{
   bool isError = false;
   List<PostModel> newArray = [];
   late List<PostModel> postModel = [];
+
+
   Future<void>fetchFinalTodoTesting() async {
     try {
       var todo = await postService.getPost(page, limit);
       // ignore: unnecessary_null_comparison
       if (todo != null) {
         postModel = todo;
-        newArray.addAll(todo);
         isLoading = false;
         notifyListeners();
       } else {
           isLoading = true;
       }
     } catch (e) {
-      print("Get todo failed $e");
       isLoading = false;
     }
   }
@@ -59,24 +59,21 @@ class PostVM extends BaseModel{
     return resData;
   }
   Future<PostModel> updateInfo(int userId, int id, String title,String body) async {
-    print("information $userId , $id ,$title, $body");
     PostModel postModel;
-    postModel = (await updateService.updatePostOne(userId,id,title,body)) as PostModel;
+    postModel = await updateService.updatePostOne(userId,id,title,body);
     notifyListeners();
     return postModel;
   }
   Future<PostModel> delete(int id) async{
-    //PostModel postModel = [];
     try{
-      await deleteService.delete(id);
+     postModel = await deleteService.delete(id) as List<PostModel>;
       notifyListeners();
     }catch(e){
       
     }
-    return null!;
+    return postModel as PostModel;
   }
   navigateToUpdate(UpdateTodoBody body) {
-    print("Update todo body");
     navigationService.navigateTo(RouteName.UPDATE);
    
   }
@@ -92,8 +89,7 @@ class PostVM extends BaseModel{
       isLoading = true;
     }
   }
-
-  navigateToGraph() {
-    navigationService.navigateTo(RouteName.TESTING);
+  navigateToCreateUser() {
+    navigationService.navigateTo(RouteName.CREATE_USER);
   }
 }
